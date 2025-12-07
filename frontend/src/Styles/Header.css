@@ -1,0 +1,466 @@
+/* ----------------- ✅ General Styles ---------------- */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* ----------------- ✅ App Container ---------------- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----------------- ✅ Header ---------------- */
+.header {
+  background: linear-gradient(90deg, #00ffff, #00cfcf);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ----------------- ✅ Logo ---------------- */
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ----------------- ✅ Logo Section ---------------- */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  margin-right: 12px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ----------------- ✅ Login Button ---------------- */
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;     
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.login-btn:hover {
+  background-color: #00c9c9;
+  text-decoration: underline;
+  transform: scale(1.08);
+}
+
+/* ----------------- ✅ Modal Overlay ---------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9000;
+  padding: 10px;
+}
+
+/* ----------------- ✅ Login Modal ---------------- */
+.login-modal {
+  width: 100%;
+  max-width: 380px;
+  background: linear-gradient(to bottom, #00ffff 14%, #ffffff 14%);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: all 0.3s;
+  object-fit: cover;
+  border: 2px solid #00ffff;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
+}
+
+/* ----------------- ✅ Close Modal Button ---------------- */
+.close-modal {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  background: #00cbcb;       /* Red background (you can change) */
+  color: #000;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+}
+
+.close-modal:hover {
+  background: #00ffff;
+  transform: scale(1.08);
+}
+
+/* ----------------- ✅ Login Header ---------------- */
+.login-header {
+  font-size: 18px;
+  color: #fff;
+  margin-top: -11px;
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* ----------------- ✅ Modal Inputs ---------------- */
+.modal-input {
+  width: 96%;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0 0 10px 0;
+  margin-top: 12px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.3s;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.modal-input:focus {
+  border-color: #000;
+}
+
+/* ----------------- ✅ Modal Login Button ---------------- */
+.modal-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;         
+  gap: 8px;                         
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #00ffff;       
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.modal-login-btn svg {
+  font-size: 18px;              
+}
+
+.modal-login-btn:hover {
+  background-color: #43e8e8;    
+  color: #fff;
+  transform: scale(1.08);
+  text-decoration: underline;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.4);
+}
+
+.modal-login-btn:active {
+  transform: scale(0.97);
+}
+
+/* ----------------- ✅ Checkbox ---------------- */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #000;
+}
+
+.checkbox-container label {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+/* ----------------- ✅ OR Section ---------------- */
+.or-container {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: #000;
+}
+
+.or-text {
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
+
+/* ----------------- ✅ Bottom Links ---------------- */
+.bottom-links {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bottom-links p {
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.account-link {
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.register-link {
+  color: #00ffff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.register-link:hover {
+  color: #43e8e8;
+  text-decoration: underline;
+  transform: scale(1.08);
+}
+
+/* ----------------- ✅ Create Header ---------------- */
+.create-header {
+  font-size: 18px;
+  color: #fff;
+  margin-top: -11px;
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* ---- Responsive for Mobile ---- */
+@media (max-width: 768px) {
+  .search-form {
+    width: 100%;
+  }
+
+  .search-form input {
+    flex: 1;
+  }
+
+  .search-form button {
+    width: 90px;
+  }
+}
+
+/* SWEETALERT MUST BE ON TOP OF MODAL */
+.swal2-container {
+  z-index: 999999 !important;
+}
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .login-modal {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .modal-input {
+    padding: 10px;
+  }
+
+  .modal-login-btn {
+    padding: 10px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+  }
+}
+
+/* ----------------- ✅ MOBILE RESPONSIVE STYLES ---------------- */
+@media screen and (max-width: 768px) {
+
+  /* ✅ App container spacing */
+  .app-container {
+    min-height: 100vh;
+  }
+
+  /* ✅ Header layout for mobile */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  /* ✅ Logo section mobile */
+  .logo-container {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .logo-image {
+    width: 45px;
+    height: 45px;
+    margin-right: 0;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  /* ✅ Login button mobile */
+  .login-btn {
+    margin-top: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ✅ Modal overlay padding */
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  /* ✅ Modal box mobile */
+  .login-modal {
+    width: 100%;
+    max-width: 95%;
+    padding: 20px 16px;
+    border-radius: 10px;
+  }
+
+  /* ✅ Close button position */
+  .close-modal {
+    top: -12px;
+    right: -12px;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  /* ✅ Headers in modal */
+  .login-header,
+  .create-header {
+    font-size: 16px;
+  }
+
+  /* ✅ Inputs for mobile */
+  .modal-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+
+  /* ✅ Modal button mobile */
+  .modal-login-btn {
+    padding: 12px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  /* ✅ Checkbox */
+  .checkbox-container {
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  /* ✅ OR separator */
+  .or-container {
+    margin: 15px 0;
+  }
+
+  .or-text {
+    font-size: 13px;
+  }
+
+  /* ✅ Bottom links mobile */
+  .bottom-links p {
+    font-size: 14px;
+  }
+
+  .account-link,
+  .register-link {
+    font-size: 14px;
+  }
+}
+
+/* ----------------- ✅ Media Queries for Mobile ---------------- */
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+    gap: 10px;
+  }
+
+  .logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .login-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .modal-input,
+  .modal-login-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .checkbox-container label {
+    font-size: 12px;
+  }
+
+  .or-text {
+    font-size: 12px;
+  }
+
+  .bottom-links p,
+  .account-link,
+  .register-link {
+    font-size: 12px;
+  }
+}

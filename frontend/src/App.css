@@ -1,0 +1,44 @@
+/* ----------------- ✅ React Icon ---------------- */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* ----------------- ✅ React Icon ---------------- */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* ----------------- ✅ React Icon ---------------- */
+  /* Background Image */
+  background-image: url("https://e0.pxfuel.com/wallpapers/49/131/desktop-wallpaper-winter-snow-house-trees-nature-forest-mountains-sky-white-snow-hills.jpg");
+  background-size: 100% 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* ----------------- ✅ React Icon ---------------- */
+  /* Optional overlay for readability */
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay;
+}
+
+/* ----------------- ✅ MOBILE RESPONSIVE ---------------- */
+@media screen and (max-width: 768px) {
+
+  .app-container {
+    /* ✅ Mobile-optimized background */
+    background-position: center top;
+    background-size: cover;  
+    background-attachment: scroll;
+  }
+}
+
+/* ----------------- ✅ VERY SMALL DEVICES ---------------- */
+@media screen and (max-width: 400px) {
+  .app-container {
+    background-position: top center;
+    background-size: cover;
+  }
+}

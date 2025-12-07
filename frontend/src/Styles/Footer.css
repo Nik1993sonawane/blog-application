@@ -1,0 +1,105 @@
+/* ----------------- ✅ React Icon ---------------- */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* ----------------- ✅ React Icon ---------------- */
+.footer {
+  background: #222;
+  color: white;
+  padding: 1rem 1.5rem;
+}
+
+/* ----------------- ✅ React Icon ---------------- */
+/* SINGLE LINE layout */
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* keeps responsive */
+}
+
+/* ----------------- ✅ React Icon ---------------- */
+/* Footer text */
+.footer-text {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ----------------- ✅ React Icon ---------------- */
+/* Circular icons row */
+.social-links {
+  display: flex;
+  gap: 0.7rem;
+}
+
+/* ----------------- ✅ React Icon ---------------- */
+/* Circular icon design */
+.social-links a {
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ----------------- ✅ React Icon ---------------- */
+/* Hover effect */
+.social-links a:hover {
+  background: #00ffff;
+  transform: scale(1.1);
+}
+
+/* ----------------- ✅ MOBILE RESPONSIVE ---------------- */
+@media screen and (max-width: 768px) {
+
+  .footer {
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .social-links a {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+}
+
+/* ----------------- ✅ EXTRA SMALL DEVICES ---------------- */
+@media screen and (max-width: 400px) {
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+
+  .social-links a {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+}
